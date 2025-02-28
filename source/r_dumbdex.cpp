@@ -421,13 +421,16 @@ void r_dumbdex::_rollback_changes(uint8_t* base)
         while(!feof(f))
         {
             uint32_t size = 0;
-            fread(&size, 1, sizeof(uint32_t), f);
+            auto n_read = fread(&size, 1, sizeof(uint32_t), f);
+            assert(n_read == 4);
 
             uint32_t offset = 0;
-            fread(&offset, 1, sizeof(uint32_t), f);
+            n_read = fread(&offset, 1, sizeof(uint32_t), f);
+            assert(n_read == 4);
 
             uint8_t* dst = base + offset;
-            fread(dst, 1, size, f);
+            n_read = fread(dst, 1, size, f);
+            assert(n_read == size);
         }
 
         fclose(f);
