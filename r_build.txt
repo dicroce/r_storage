@@ -24,7 +24,9 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(VCPKG_TARGET_TRIPLET x64-linux-dynamic)
 endif()
 
-add_compile_options(
-    "-fno-omit-frame-pointer"
-    "$<$<CONFIG:DEBUG>:-O0;-g3;-ggdb3;-fasynchronous-unwind-tables>"
-)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    add_compile_options(
+        "-fno-omit-frame-pointer"
+        "$<$<CONFIG:DEBUG>:-O0;-g3;-ggdb3;-fasynchronous-unwind-tables>"
+    )
+endif()
