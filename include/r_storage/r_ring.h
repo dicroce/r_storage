@@ -46,7 +46,7 @@ public:
 
         if(qs_et < oldest_et)
         {
-            printf("qs = %ld, oldest = %ld\n",qs_et,oldest_et);
+            printf("qs = %lu, oldest = %lu\n",qs_et,oldest_et);
             fflush(stdout);
             R_THROW(("query start time is too old"));
         }
