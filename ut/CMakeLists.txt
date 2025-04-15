@@ -1,3 +1,4 @@
+include(GSTREAMERConfig.cmake REQUIRED)
 
 FetchContent_Declare(
     r_fakey

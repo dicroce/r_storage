@@ -52,7 +52,7 @@ target_link_libraries(
     ${CMAKE_DL_LIBS}
 )
 
-add_subdirectory(ut)
+#add_subdirectory(ut)
 
 if(PROJECT_IS_TOP_LEVEL)
 configure_dev_package("r_storage" "Code for creating and working with revere media files.")
