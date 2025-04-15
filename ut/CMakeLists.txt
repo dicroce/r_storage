@@ -3,6 +3,7 @@ FetchContent_Declare(
     r_fakey
     GIT_REPOSITORY https://github.com/dicroce/r_fakey.git
     GIT_TAG        main
+    FIND_PACKAGE_ARGS NAMES r_fakey
 )
 FetchContent_MakeAvailable(r_fakey)
 
@@ -10,6 +11,7 @@ FetchContent_Declare(
     r_pipeline
     GIT_REPOSITORY https://github.com/dicroce/r_pipeline.git
     GIT_TAG        main
+    FIND_PACKAGE_ARGS NAMES r_pipeline
 )
 FetchContent_MakeAvailable(r_pipeline)
 
@@ -17,6 +19,7 @@ FetchContent_Declare(
     r_av
     GIT_REPOSITORY https://github.com/dicroce/r_av.git
     GIT_TAG        main
+    FIND_PACKAGE_ARGS NAMES r_av
 )
 FetchContent_MakeAvailable(r_av)
 
