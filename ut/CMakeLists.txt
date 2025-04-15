@@ -41,15 +41,6 @@ target_include_directories(
     r_storage_ut PUBLIC 
     include
     ../include
-    ${gstreamer_LIBRARY_DIRS}
-    ${r_utils_SOURCE_DIR}/include
-    ${r_fakey_SOURCE_DIR}/include
-    ${r_pipeline_SOURCE_DIR}/include
-    ${r_av_SOURCE_DIR}/include
-)
-target_link_directories(
-    r_storage_ut PUBLIC 
-    ${r_fakey_BUILD_DIR}
 )
 target_link_libraries(
     r_storage_ut LINK_PUBLIC 
@@ -58,10 +49,6 @@ target_link_libraries(
     r_av
     r_utils
     r_storage
-    ${gstreamer-rtsp-server_STATIC_LIBRARIES}
-    ${gstreamer-app_STATIC_LIBRARIES}
-    ${gstreamer-plugins-good_STATIC_LIBRARIES}
-    ${gstreamer-plugins-base_STATIC_LIBRARIES}
-    ${gstreamer-codecparsers_STATIC_LIBRARIES}
+    ${GST_LIBS}
     bz2
 )
