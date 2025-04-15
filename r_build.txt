@@ -30,7 +30,6 @@ set(CMAKE_PREFIX_PATH "/usr/local" CACHE STRING "Default prefix path for find_pa
 
 set(CPACK_GENERATOR "DEB")
 set(CPACK_PACKAGE_VENDOR "Tony Di Croce")
-set(CPACK_SET_DESTDIR TRUE)
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "dicroce@gmail.com")
 set(CPACK_PACKAGE_CONTACT "dicroce@gmail.com")
 set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
@@ -64,6 +63,7 @@ function(configure_dev_package package_name package_summary)
     install(
         DIRECTORY include/${package_name}
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
     )
 
     install(
