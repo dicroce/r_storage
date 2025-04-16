@@ -1,2 +1,0 @@
-/usr/bin/ar qc libr_storage.a CMakeFiles/r_storage.dir/source/r_dumbdex.cpp.o CMakeFiles/r_storage.dir/source/r_ind_block.cpp.o CMakeFiles/r_storage.dir/source/r_rel_block.cpp.o CMakeFiles/r_storage.dir/source/r_ring.cpp.o CMakeFiles/r_storage.dir/source/r_storage_file.cpp.o CMakeFiles/r_storage.dir/source/r_storage_file_reader.cpp.o
-/usr/bin/ranlib libr_storage.a
