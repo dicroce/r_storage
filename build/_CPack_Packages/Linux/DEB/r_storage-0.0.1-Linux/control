@@ -1,0 +1,9 @@
+Architecture: amd64
+Description: r_storage built using CMake
+Maintainer: dicroce@gmail.com
+Package: r_storage
+Priority: optional
+Section: devel
+Version: 0.0.1
+Installed-Size: 4957
+
